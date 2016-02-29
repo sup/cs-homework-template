@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+
+% ==== PACKAGES ==== %
+\usepackage{fullpage}
+\usepackage{amsmath,amssymb}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{float}
+
+% ==== MARGINS ==== %
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+
+\setlength{\textheight}{9.5in}
+
+
+% ==== MACROS ==== %
+\newcommand{\proof}[1]{
+{\noindent {\it Proof.} {#1} \rule{2mm}{2mm} \vskip \belowdisplayskip}
+}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{corollary}[lemma]{Corollary}
+\lstset{moredelim=[is][\bfseries]{[*}{*]}}
+
+% ==== DOCUMENT PROPER ==== %
+\begin{document}
+
+% --- Header Box --- %
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.2in}
+
+\begin{center}\framebox{\parbox{\boxlength}{\bf
+      Long Class Name \hfill Problem Set X\\
+      ClassCode X Season 20XX \hfill Due Time DayName, Month DayNumber
+}}
+\end{center}
+
+% --- Name Fields --- %
+\begin{center}
+  name: Charles Lai
+  \ind
+  netid: cjl223
+  \ind
+  collaborators: 
+\end{center}
+
+% --- Question --- %
+\section{Problem Statement}
+\section{Reasoning and Commentary}
+\section{Algorithm}
+\subsection{Pseudo-code}
+\begin{lstlisting}
+[*While*] there is existence
+    [*If*] existence is pain then:
+        relax
+    [*Else*] chill
+        [*If*] cold then:
+            warm
+        [*Else*] chill some more
+        [*Endif*]
+    [*Endif*]
+[*Endwhile*]
+[*Return*] relaxation
+\end{lstlisting}
+
+\section{Proof of Correctness}
+\subsection*{Completion:}
+\subsection*{Optimality:}
+\begin{lemma} This is a claim with a list of equations:
+\begin{enumerate}
+\item $N_x = (4 - 0)/20 = 1/5$
+\item $N_y = (10 - 0)/20 = 1/2$
+\item $N_z = \sqrt{(1 - (1/5)^2 - (1/2)^2)} = \sqrt{0.71} \approx .843$
+\end{enumerate}
+\end{lemma}
+\proof{This is a proof}
+
+\section{Running Time Analysis}
+This is a matrix!
+$$R^{-1} = \begin{bmatrix}
+       1       & 0           & 0         & 0\\[0.3em]
+       0       & -0.8        & -0.6      & 0\\[0.3em]
+       0       &  0.6        & -0.8      & 0\\[0.3em]
+       0       & 0           & 0         & 1
+     \end{bmatrix}$$
+     
+We can use the same logic in 4.1.1 to show that the gradient with respect to the weights $w$ is also a flipped convolution over a separate line equation $\tilde{x}$:
+\[ \frac{\partial L}{\partial w} = \frac{\partial L}{\partial y} \star \tilde{x} \]
+
+and cool picture:
+
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=x_size_float]{filename.ext}
+\caption{File Caption}
+\end{figure}
+
+\end{document}
